@@ -8,7 +8,13 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
           <div>
-            <h3 className="text-2xl font-bold text-[#3E8A86] mb-4">Lenaq</h3>
+          <div className="flex items-center">
+            <img 
+              src="/img/logowhite.png" 
+              alt="Lenaq" 
+              className="h-9 md:h-11 w-auto"
+            />
+          </div>
             <p className="text-[#A9A298] mb-6">
               Engineering the future with scalable digital solutions.
             </p>
@@ -21,7 +27,7 @@ export const Footer = () => {
               <div className="flex items-center space-x-3 group cursor-pointer">
                 <Mail className="w-5 h-5 text-[#3E8A86] group-hover:scale-110 transition-transform" />
                 <span className="text-[#A9A298] group-hover:text-white transition-colors">
-                  hello@lenaq.com
+                contact@lenaq.com
                 </span>
               </div>
               <div className="flex items-center space-x-3 group cursor-pointer">

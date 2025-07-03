@@ -21,7 +21,7 @@ const caseStudies = [
     gradient: "from-[#223C30] to-[#3E8A86]"
   },
   {
-    title: "English Learning Platform",
+    title: "Learning Platform",
     description: "Interactive language learning system with progress tracking",
     tech: ["Xano", "Webflow", "Firebase"],
     icon: BookOpen,
@@ -88,11 +88,6 @@ export const CaseStudies = () => {
                       {tech}
                     </span>
                   ))}
-                </div>
-                
-                <div className="flex items-center text-[#3E8A86] font-medium group-hover:translate-x-2 transition-transform duration-300 cursor-pointer">
-                  View Details 
-                  <ExternalLink className="ml-2 w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
                 </div>
               </CardContent>
             </Card>

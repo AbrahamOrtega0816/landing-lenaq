@@ -74,8 +74,8 @@ export const Services = () => {
               }`}
             >
               <CardHeader className="text-center pb-4">
-                <div className={`w-16 h-16 ${service.color} rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 shadow-lg`}>
-                  <service.icon className="w-8 h-8 text-white" />
+                <div className={`w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500`}>
+                  <service.icon className="`w-8 h-8 text-primary"/>
                 </div>
                 <CardTitle className="text-xl font-semibold text-[#223C30] group-hover:text-[#3E8A86] transition-colors duration-300">
                   {service.title}

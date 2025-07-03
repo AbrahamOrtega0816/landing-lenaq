@@ -1,5 +1,4 @@
-
-import { Truck, GraduationCap } from "lucide-react";
+import { Truck, GraduationCap, Brain, BotIcon } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const techStack = [
@@ -26,7 +25,7 @@ export const IndustriesTech = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Industries */}
           <div className={`transition-all duration-1000 ${isVisible ? 'animate-fade-in-left' : 'opacity-0 -translate-x-10'}`}>
-            <h3 className="text-3xl font-bold text-[#223C30] mb-8">Industries We Serve</h3>
+            <h3 className="text-3xl font-bold text-[#223C30] mb-8">Our top industries</h3>
             
             <div className="space-y-8">
               <div className="flex items-start space-x-4 group hover-lift cursor-pointer">
@@ -55,6 +54,20 @@ export const IndustriesTech = () => {
                   </h4>
                   <p className="text-[#434343] group-hover:text-[#223C30] transition-colors duration-300">
                     Learning management systems, educational platforms
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-4 group hover-lift cursor-pointer">
+                <div className="bg-[#2A623E] p-3 rounded-full group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 shadow-lg relative">
+                  <BotIcon className="w-6 h-6 text-white" />
+                  <div className="absolute inset-0 bg-[#4ADE80] rounded-full blur-lg opacity-0 group-hover:opacity-50 transition-opacity duration-500" />
+                </div>
+                <div className="flex-1">
+                  <h4 className="text-xl font-semibold text-[#223C30] mb-2 group-hover:text-[#3E8A86] transition-colors duration-300">
+                    AI
+                  </h4>
+                  <p className="text-[#434343] group-hover:text-[#223C30] transition-colors duration-300">
+                    AI-powered solutions, chatbots, and automation
                   </p>
                 </div>
               </div>
