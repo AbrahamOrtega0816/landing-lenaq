@@ -53,7 +53,7 @@ export const Footer = () => {
         
         <div className="border-t border-[#3E8A86] border-opacity-30 mt-8 pt-8 text-center">
           <p className="text-[#A9A298]">
-            © 2024 Lenaq — Engineering the Future.
+            © 2025 Lenaq — Engineering the Future.
           </p>
         </div>
       </div>

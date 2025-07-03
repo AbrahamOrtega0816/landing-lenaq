@@ -17,7 +17,6 @@ export const Hero = () => {
         {/* Static geometric shapes with subtle opacity */}
         <div className="absolute top-1/4 left-1/4 w-32 h-32 md:w-48 md:h-48 bg-[#223C30] opacity-10 rounded-full"></div>
         <div className="absolute bottom-1/4 right-1/4 w-40 h-40 md:w-60 md:h-60 bg-[#3E8A86] opacity-5 rounded-full"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 md:w-52 md:h-52 bg-white opacity-3 rounded-full"></div>
         
         {/* Minimal floating icons - reduced animation */}
         <div className="absolute top-20 left-20 animate-float">

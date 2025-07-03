@@ -25,9 +25,9 @@ export const Header = () => {
           {/* Logo */}
           <div className="flex items-center">
             <img 
-              src="/lovable-uploads/1fa81a76-0bcc-4738-9c44-8deb2e324066.png" 
+              src="/img/1fa81a76-0bcc-4738-9c44-8deb2e324066.png" 
               alt="Lenaq" 
-              className="h-8 md:h-10 w-auto"
+              className="h-9 md:h-11 w-auto"
             />
           </div>
 
