@@ -97,6 +97,17 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
     font-family: 'Inter', sans-serif;
   }
+
+  /* Improved mobile scroll behavior */
+  html {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Prevent horizontal scroll on mobile */
+  body {
+    overflow-x: hidden;
+  }
 }
 
 /* Custom animations */
@@ -130,11 +141,6 @@ All colors MUST be HSL.
   animation: pulse 3s ease-in-out infinite;
 }
 
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
 /* Custom hover effects */
 .hover-lift {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -143,4 +149,15 @@ html {
 .hover-lift:hover {
   transform: translateY(-8px);
   box-shadow: 0 20px 40px rgba(62, 138, 134, 0.15);
+}
+
+/* Mobile-first responsive utilities */
+@layer utilities {
+  .text-responsive {
+    @apply text-sm sm:text-base md:text-lg;
+  }
+  
+  .container-responsive {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
 }
