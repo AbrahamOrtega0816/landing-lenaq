@@ -2,10 +2,11 @@ import { Header } from "@/components/sections/Header";
 import { Hero } from "@/components/sections/Hero";
 import { Services } from "@/components/sections/Services";
 import { IndustriesTech } from "@/components/sections/IndustriesTech";
-import { AboutMe } from "@/components/sections/AboutUs";
+import { AboutUs } from "@/components/sections/AboutUs";
 import { CaseStudies } from "@/components/sections/CaseStudies";
 import { CTA } from "@/components/sections/CTA";
-import { Footer } from "@/components/sections/Footer";
+import { Footer } from "@/components/sections/Footer"; 
+import LogoCarousel from "@/components/sections/Carousel";
 
 const Index = () => {
   return (
@@ -13,7 +14,7 @@ const Index = () => {
       <Header />
       <div className="pt-16 md:pt-20">
         <Hero />
-        <AboutMe />
+        <AboutUs />
         <div id="services">
           <Services />
         </div>
@@ -22,6 +23,9 @@ const Index = () => {
         </div>
         <div id="case-studies">
           <CaseStudies />
+        </div>
+        <div>
+        <LogoCarousel />
         </div>
         <div id="contact">
           <CTA />

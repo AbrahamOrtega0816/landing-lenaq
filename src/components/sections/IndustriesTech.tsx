@@ -74,7 +74,7 @@ export const IndustriesTech = () => {
             </div>
           </div>
           
-          {/* Tech Stack */}
+          {/* Tech Stack 
           <div className={`transition-all duration-1000 ${isVisible ? 'animate-fade-in-right' : 'opacity-0 translate-x-10'}`}>
             <h3 className="text-3xl font-bold text-[#223C30] mb-8">Tech Stack</h3>
             
@@ -99,7 +99,6 @@ export const IndustriesTech = () => {
                         transitionDelay: `${index * 200}ms`
                       }}
                     >
-                      {/* Shimmer effect */}
                       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse" />
                     </div>
                   </div>
@@ -107,8 +106,10 @@ export const IndustriesTech = () => {
               ))}
             </div>
           </div>
+          */}
         </div>
       </div>
     </section>
   );
 };
+
