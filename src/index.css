@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -95,7 +94,7 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
   }
 
   /* Improved mobile scroll behavior */
@@ -156,7 +155,8 @@ All colors MUST be HSL.
 }
 
 @keyframes bounce-soft {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -165,7 +165,8 @@ All colors MUST be HSL.
 }
 
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px);
   }
   50% {
@@ -183,11 +184,21 @@ All colors MUST be HSL.
 }
 
 @keyframes pulse-glow {
-  0%, 100% {
+  0%,
+  100% {
     box-shadow: 0 0 15px rgba(62, 138, 134, 0.2);
   }
   50% {
     box-shadow: 0 0 25px rgba(62, 138, 134, 0.4);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
   }
 }
 
@@ -223,13 +234,29 @@ All colors MUST be HSL.
   animation: pulse-glow 3s ease-in-out infinite;
 }
 
+.animate-shimmer {
+  animation: shimmer 2s ease-in-out infinite;
+}
+
 /* Staggered animations - reduced delays */
-.animate-stagger-1 { animation-delay: 0.1s; }
-.animate-stagger-2 { animation-delay: 0.2s; }
-.animate-stagger-3 { animation-delay: 0.25s; }
-.animate-stagger-4 { animation-delay: 0.3s; }
-.animate-stagger-5 { animation-delay: 0.35s; }
-.animate-stagger-6 { animation-delay: 0.4s; }
+.animate-stagger-1 {
+  animation-delay: 0.1s;
+}
+.animate-stagger-2 {
+  animation-delay: 0.2s;
+}
+.animate-stagger-3 {
+  animation-delay: 0.25s;
+}
+.animate-stagger-4 {
+  animation-delay: 0.3s;
+}
+.animate-stagger-5 {
+  animation-delay: 0.35s;
+}
+.animate-stagger-6 {
+  animation-delay: 0.4s;
+}
 
 /* Initial hidden state for animations */
 .animate-on-scroll {
@@ -262,7 +289,7 @@ All colors MUST be HSL.
   .text-responsive {
     @apply text-sm sm:text-base md:text-lg;
   }
-  
+
   .container-responsive {
     @apply px-4 sm:px-6 lg:px-8;
   }
@@ -285,7 +312,6 @@ section {
 .rotate-x-12 {
   transform: rotateX(8deg);
 }
-
 
 /*caruseel*/
 .integrations-container {

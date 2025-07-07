@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from "react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const LogoCarousel = () => {
@@ -8,63 +8,63 @@ const LogoCarousel = () => {
       name: "Calendly",
       dark: "../img/calendlydark.svg",
       light: "../img/calendlylight.svg",
-      color: "#006bff"
+      color: "#006bff",
     },
     {
       name: "Calendly",
       dark: "../img/calendlydark.svg",
       light: "../img/calendlylight.svg",
-      color: "#006bff"
+      color: "#006bff",
     },
     {
       name: "Slack",
       dark: "../img/slackdark.svg",
       light: "../img/slacklight.svg",
-      color: "#4a154b"
+      color: "#4a154b",
     },
     {
       name: "Phyton",
       dark: "../img/pythondark.svg",
       light: "../img/pythonlight.svg",
-      color: "#3776AB"
+      color: "#3776AB",
     },
     {
       name: "Stripe",
       dark: "../img/stripedark.svg",
       light: "../img/stripelight.svg",
-      color: "#635bff"
+      color: "#635bff",
     },
     {
       name: "Aws",
       dark: "../img/awsdark.svg",
       light: "../img/awslight.svg",
-      color: "#FF9900"
+      color: "#FF9900",
     },
     {
       name: "Next",
       dark: "../img/nextdark.svg",
       light: "../img/nextlight.svg",
-      color: "#000000"
+      color: "#000000",
     },
-    
+
     {
       name: "Webflow",
       dark: "../img/webflowdark.svg",
       light: "../img/webflowlight.svg",
-      color: "#4353FF"
+      color: "#4353FF",
     },
     {
       name: "Vue",
       dark: "../img/vuedark.svg",
       light: "../img/vuelight.svg",
-      color: "#42b883"
+      color: "#42b883",
     },
     {
       name: "Zapier",
       dark: "../img/zapierdark.svg",
       light: "../img/zapierlight.svg",
-      color: "#FF4F00"
-    }
+      color: "#FF4F00",
+    },
   ];
 
   const [isPaused, setIsPaused] = useState(false);
@@ -75,7 +75,7 @@ const LogoCarousel = () => {
   useEffect(() => {
     const upperTrack = upperTrackRef.current;
     const lowerTrack = lowerTrackRef.current;
-    
+
     let animationFrameId;
     let position = 0;
     const speed = 0.5;
@@ -83,15 +83,15 @@ const LogoCarousel = () => {
     const animate = () => {
       if (!isPaused) {
         position -= speed;
-        
+
         if (position <= -upperTrack.scrollWidth / 3) {
           position = 0;
         }
-        
+
         upperTrack.style.transform = `translateX(${position}px)`;
         lowerTrack.style.transform = `translateX(${-position}px)`;
       }
-      
+
       animationFrameId = requestAnimationFrame(animate);
     };
 
@@ -103,55 +103,63 @@ const LogoCarousel = () => {
   }, [isPaused]);
 
   return (
-    <section ref={ref} className="py-20 bg-[#FAF3E1] relative overflow-hidden">
-    <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'}`}>
-    <h2 className="text-4xl md:text-5xl font-bold text-[#223C30] mb-4">
-    Tech Stack
-          </h2>
-      </div>
-    <div className="integrations-container">
-      <div className="integrations-carousel-container">
-        {/* Carrusel superior */}
-        <div 
-          className="integrations-carousel upper"
-          onMouseEnter={() => setIsPaused(true)}
-          onMouseLeave={() => setIsPaused(false)}
-        >
-          <div 
-            ref={upperTrackRef}
-            className="integrations-carousel-track"
-          >
-            {[...Array(3)].map((_, i) => (
-              <div key={`upper-${i}`} className="integrations-carousel-group">
-                {logos.map((logo, index) => (
-                  <LogoItem key={`${logo.name}-${i}-${index}`} logo={logo} />
-                ))}
-              </div>
-            ))}
-          </div>
-        </div>
+    <section
+      ref={ref}
+      className="py-20 bg-gradient-to-b from-[#FAF3E1] via-[#FAF3E1] to-[#FAF3E1] relative overflow-hidden"
+    >
+      {/* Degradado de transición superior */}
+      <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-[#FAF3E1] to-transparent"></div>
 
-        {/* Carrusel inferior */}
-        <div 
-          className="integrations-carousel lower"
-          onMouseEnter={() => setIsPaused(true)}
-          onMouseLeave={() => setIsPaused(false)}
-        >
-          <div 
-            ref={lowerTrackRef}
-            className="integrations-carousel-track"
+      <div
+        className={`text-center mb-16 transition-all duration-1000 ${
+          isVisible ? "animate-fade-in-up" : "opacity-0 translate-y-10"
+        }`}
+      >
+        <h2 className="text-4xl md:text-5xl font-bold text-[#223C30] mb-4">
+          Tech Stack
+        </h2>
+      </div>
+
+      <div className="integrations-container">
+        <div className="integrations-carousel-container">
+          {/* Carrusel superior */}
+          <div
+            className="integrations-carousel upper"
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
           >
-            {[...Array(3)].map((_, i) => (
-              <div key={`lower-${i}`} className="integrations-carousel-group">
-                {logos.map((logo, index) => (
-                  <LogoItem key={`${logo.name}-${i}-${index}-lower`} logo={logo} />
-                ))}
-              </div>
-            ))}
+            <div ref={upperTrackRef} className="integrations-carousel-track">
+              {[...Array(3)].map((_, i) => (
+                <div key={`upper-${i}`} className="integrations-carousel-group">
+                  {logos.map((logo, index) => (
+                    <LogoItem key={`${logo.name}-${i}-${index}`} logo={logo} />
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Carrusel inferior */}
+          <div
+            className="integrations-carousel lower"
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+          >
+            <div ref={lowerTrackRef} className="integrations-carousel-track">
+              {[...Array(3)].map((_, i) => (
+                <div key={`lower-${i}`} className="integrations-carousel-group">
+                  {logos.map((logo, index) => (
+                    <LogoItem
+                      key={`${logo.name}-${i}-${index}-lower`}
+                      logo={logo}
+                    />
+                  ))}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
-    </div>
     </section>
   );
 };
@@ -161,20 +169,19 @@ const LogoItem = ({ logo }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div 
+    <div
       className="logo-container"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       style={{
-        backgroundColor: isHovered ? `${logo.color}` : '#fff',
+        backgroundColor: isHovered ? `${logo.color}` : "#fff",
       }}
     >
-      <img 
-        src={isHovered ? logo.light : logo.dark} 
-        alt={logo.name} 
-        className="logo-img" 
+      <img
+        src={isHovered ? logo.light : logo.dark}
+        alt={logo.name}
+        className="logo-img"
       />
-     
     </div>
   );
 };
